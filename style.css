@@ -97,3 +97,34 @@ nav ul li a:hover {
     text-align: center;
 }
  
+
+/* let's style the about us */
+.cta-button {
+    display: inline-block;
+    background-color: #0056b3;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+.cta-button:hover{
+    background-color: #4CAF50;
+}
+.bk{
+display: ruby;
+}
+.bk >img>{
+    border-radius: 50%;
+}
+
+.container886{
+    font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            justify-content: center;
+            text-align: justify;
+            place-items: center;
+        }
