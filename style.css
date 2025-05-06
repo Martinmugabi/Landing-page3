@@ -212,4 +212,67 @@ display: ruby;
     padding: 30px;
     margin-top: 10px;
  }
+
  
+ /* lets style the contact page*/
+ .content12{
+    display: flex;
+    margin: 0;
+    justify-content: center;
+}
+#wrap{
+flex-wrap: wrap;
+}
+.contact-pad{
+border-radius: 10px;
+    box-sizing: border-box;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    height:200px ;
+    width: 300px;
+    margin: 20px;
+    justify-content: center;
+}
+
+.contact-form {
+background-color: #f9f9f9;
+padding: 30px;
+border-radius: 5px;
+margin-top: 30px;
+}
+.form-group {
+margin-bottom: 20px;
+}
+label {
+display: block;
+margin-bottom: 5px;
+font-weight: bold;
+}
+input, textarea {
+width: 100%;
+padding: 10px;
+border: 1px solid #ddd;
+border-radius: 4px;
+}
+button {
+background-color: #2c3e50;
+color: white;
+border: none;
+padding: 10px 20px;
+border-radius: 4px;
+cursor: pointer;
+font-size: 16px;
+}
+button:hover {
+background-color: #1a252f;
+}
+.media-links{
+display: flex;
+margin: 30px;
+justify-content: center;
+justify-content: space-around;
+}
+.media-links >a{
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+font-weight: 500;
+}
