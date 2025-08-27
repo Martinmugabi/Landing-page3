@@ -14,17 +14,12 @@
             line-height: 1.6;
             background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center fixed;
             background-size: cover;
-            height: ;
+            height: 500px; ;
             display: flex;
             flex-direction: column;
         }
 
-        .container1 {
-            max-width: 1000px;
-            margin: 0 auto;
-            overflow: hidden;
-        
-        }
+       
 
         /* Header Styles */
         .container2 {
@@ -35,6 +30,10 @@
             background-color: rgba(44, 62, 80, 0.9);
             color: white;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+        
+            backdrop-filter: blur(10px);
+            width: 100%;
         }
 
         .container2 h1 {
@@ -122,9 +121,7 @@
             padding: 60px 20px;
             text-shadow: black 0.1em 0.1em 0.2em;
             flex-wrap: wrap;
-            background-color: rgba(255, 255, 255, 0.95);
             border-radius: 10px;
-            margin: 40px 20px;
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
         }
 
@@ -132,9 +129,9 @@
             flex: 1;
             min-width: 250px;
             max-width: 300px;
-            margin: 15px;
             padding: 30px;
             text-align: center;
+            color: white;
             border-radius: 8px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -147,14 +144,16 @@
         }
 
         .best h3 {
-            color: #2c3e50;
+            color: #e8edf1;
             font-size: 1.3rem;
             margin-bottom: 15px;
+            font-weight: 700;
         }
 
         .best p {
-            color: #7f8c8d;
+            color: #e5edee;
             font-size: 0.95rem;
+            font-weight: 400;
         }
 
         /* Footer Styles */
@@ -163,13 +162,12 @@
             padding: 20px;
             background-color: rgba(44, 62, 80, 0.9);
             color: white;
-            margin-top: 40px;
         }
 
         .footer h3 {
             margin: 0;
             font-size: 0.9rem;
-            font-weight: 300;
+            font-weight: 400;
         }
 
         /* Responsive Design */
