@@ -144,4 +144,190 @@
         }
 
 
+        // Wait for the DOM to fully load
+document.addEventListener('DOMContentLoaded', function() {
+    
+    // Smooth scrolling for anchor links
+    const anchorLinks = document.querySelectorAll('a[href^="#"]');
+    for (let link of anchorLinks) {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    }
+    
+    // Add animation to headings when they come into view
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.2
+    };
+    
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate-in');
+            }
+        });
+    }, observerOptions);
+    
+    // Observe all headings in the main content
+    const headings = document.querySelectorAll('.container886 h2');
+    headings.forEach(function(heading) {
+        heading.style.opacity = '0';
+        heading.style.transform = 'translateY(20px)';
+        heading.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(heading);
+    });
+    
+    // Add class when animation should trigger
+    document.addEventListener('scroll', function() {
+        const elements = document.querySelectorAll('.container886 h2');
+        elements.forEach(function(el) {
+            if (isElementInViewport(el)) {
+                el.classList.add('animate-in');
+            }
+        });
+    });
+    
+    // Helper function to check if element is in viewport
+    function isElementInViewport(el) {
+        const rect = el.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
+    
+    // Add animation class when element comes into view
+    const animateInClass = 'animate-in';
+    const animatedElements = document.querySelectorAll('.container886 h2');
+    
+    animatedElements.forEach(function(el) {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(20px)';
+        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    });
+    
+    // Handle scroll event for animations
+    function checkScroll() {
+        animatedElements.forEach(function(el) {
+            if (isElementInViewport(el)) {
+                el.style.opacity = '1';
+                el.style.transform = 'translateY(0)';
+            }
+        });
+    }
+    
+    // Initial check and add scroll listener
+    checkScroll();
+    window.addEventListener('scroll', checkScroll);
+    
+    // Add hover effect to the product image
+    const productImage = document.querySelector('.bk img');
+    if (productImage) {
+        productImage.addEventListener('mouseenter', function() {
+            this.style.transform = 'scale(1.05)';
+            this.style.transition = 'transform 0.3s ease';
+        });
         
+        productImage.addEventListener('mouseleave', function() {
+            this.style.transform = 'scale(1)';
+        });
+    }
+    
+    // Add click effect to CTA buttons
+    const ctaButtons = document.querySelectorAll('.cta-button');
+    ctaButtons.forEach(function(button) {
+        button.addEventListener('mousedown', function() {
+            this.style.transform = 'scale(0.95)';
+        });
+        
+        button.addEventListener('mouseup', function() {
+            this.style.transform = 'scale(1)';
+        });
+        
+        button.addEventListener('mouseleave', function() {
+            this.style.transform = 'scale(1)';
+        });
+    });
+    
+    // Update footer year automatically
+    const footer = document.querySelector('.foots h3');
+    if (footer) {
+        const currentYear = new Date().getFullYear();
+        footer.textContent = footer.textContent.replace('2025', currentYear);
+    }
+    
+    // Add a simple scroll-to-top button
+    const scrollToTopButton = document.createElement('button');
+    scrollToTopButton.innerHTML = '↑';
+    scrollToTopButton.style.position = 'fixed';
+    scrollToTopButton.style.bottom = '20px';
+    scrollToTopButton.style.right = '20px';
+    scrollToTopButton.style.width = '50px';
+    scrollToTopButton.style.height = '50px';
+    scrollToTopButton.style.borderRadius = '50%';
+    scrollToTopButton.style.background = '#2c3e50';
+    scrollToTopButton.style.color = 'white';
+    scrollToTopButton.style.border = 'none';
+    scrollToTopButton.style.cursor = 'pointer';
+    scrollToTopButton.style.fontSize = '24px';
+    scrollToTopButton.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.2)';
+    scrollToTopButton.style.opacity = '0';
+    scrollToTopButton.style.transition = 'opacity 0.3s ease';
+    scrollToTopButton.style.zIndex = '1000';
+    
+    document.body.appendChild(scrollToTopButton);
+    
+    // Show/hide scroll-to-top button based on scroll position
+    window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 300) {
+            scrollToTopButton.style.opacity = '1';
+        } else {
+            scrollToTopButton.style.opacity = '0';
+        }
+    });
+    
+    // Scroll to top when button is clicked
+    scrollToTopButton.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+    
+    // Add a simple animation to the header text
+    const headerText = document.querySelector('.pp h2');
+    if (headerText) {
+        headerText.style.opacity = '0';
+        headerText.style.transform = 'translateY(-20px)';
+        headerText.style.transition = 'opacity 1s ease, transform 1s ease';
+        
+        setTimeout(function() {
+            headerText.style.opacity = '1';
+            headerText.style.transform = 'translateY(0)';
+        }, 300);
+    }
+    
+    // Add animation to the header paragraph
+    const headerParagraph = document.querySelector('.pp p');
+    if (headerParagraph) {
+        headerParagraph.style.opacity = '0';
+        headerParagraph.style.transition = 'opacity 1s ease 0.5s';
+        
+        setTimeout(function() {
+            headerParagraph.style.opacity = '1';
+        }, 800);
+    }
+});
