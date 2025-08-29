@@ -2,37 +2,151 @@
 
  
 
-/* let's style the about us */
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header section */
+.pp {
+    background: linear-gradient(135deg, #2c3e50, #4a6580);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.pp h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.pp p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+/* Main content container */
+.container886 {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.container886 h2 {
+    color: #2c3e50;
+    font-size: 1.8rem;
+    margin: 30px 0 15px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #6c8baf;
+    display: inline-block;
+}
+
+.container886 p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+/* Image and text section */
+.bk {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin: 30px 0;
+    flex-wrap: wrap;
+}
+
+.bk img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.bk img:hover {
+    transform: scale(1.02);
+}
+
+/* Call-to-action buttons */
 .cta-button {
     display: inline-block;
-    background-color: #0056b3;
+    background: #2c3e50;
     color: white;
-    padding: 10px 20px;
+    padding: 12px 25px;
     text-decoration: none;
     border-radius: 5px;
-    margin-top: 10px;
-}
-.cta-button:hover{
-    background-color: #4CAF50;
-}
-.bk{
-display: ruby;
-}
-.bk >img>{
-    border-radius: 50%;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin: 10px 0 30px;
 }
 
-.container886{
-    font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            color: #333;
-            justify-content: center;
-            text-align: justify;
-            place-items: center;
-        }
+.cta-button:hover {
+    background: #4a6580;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
 
+/* Footer */
+.foots {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.foots h1 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.foots p {
+    max-width: 600px;
+    margin: 0 auto 20px;
+    font-size: 1.1rem;
+}
+
+.foots h3 {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin-top: 20px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .pp h2 {
+        font-size: 2rem;
+    }
+    
+    .pp p {
+        font-size: 1rem;
+    }
+    
+    .bk {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .bk img {
+        max-width: 100%;
+    }
+    
+    .container886 h2 {
+        font-size: 1.5rem;
+    }
+}
 
   /* General Styles */
 body {
