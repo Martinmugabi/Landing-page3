@@ -358,21 +358,131 @@ font-weight: 500;
 }
 
 
-/* let's style the products */
-.first-product{
-    display: flex;
-    margin:10px;
-}
-#wrap{
-    flex-wrap: wrap;
-}
-.last-product{
- border-radius: 10px;
+/* Reset some default browser styles */
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  width: 200px;
-  height:200px;
-  box-shadow: rgb(116, 114, 114);
+  font-family: Arial, Helvetica, sans-serif;
 }
+
+body {
+  background: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header section */
+.pp {
+  text-align: center;
+  padding: 2rem;
+  background: #222;
+  color: #fff;
+}
+
+.pp h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.pp p {
+  font-size: 1rem;
+  color: #ddd;
+}
+
+/* Product container */
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Product card */
+.content1 {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease-in-out;
+}
+
+.content1:hover {
+  transform: translateY(-5px);
+}
+
+/* Product image */
+.product-image img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #eee;
+}
+
+/* Product details */
+.megan3 {
+  padding: 1rem;
+  text-align: center;
+}
+
+.megan3 h3 {
+  font-size: 1.2rem;
+  color: #222;
+  margin-bottom: 0.5rem;
+}
+
+.megan3 p {
+  font-size: 0.95rem;
+  color: #666;
+}
+
+/* Buttons */
+.megan4 {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+  border-top: 1px solid #eee;
+}
+
+.megan4 button {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.bb1 {
+  background: #28a745;
+  color: #fff;
+}
+
+.bb1:hover {
+  background: #218838;
+}
+
+.bb2 {
+  background: #007bff;
+  color: #fff;
+}
+
+.bb2:hover {
+  background: #0056b3;
+}
+
+/* Footer */
+.foots {
+  background: #222;
+  color: #ddd;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+
 
 
 
