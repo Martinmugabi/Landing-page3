@@ -331,3 +331,41 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 800);
     }
 });
+
+
+
+// Wait for DOM to load
+document.addEventListener("DOMContentLoaded", () => {
+  const addToCartButtons = document.querySelectorAll(".bb1");
+  const detailButtons = document.querySelectorAll(".bb2");
+
+  // Add to cart functionality
+  addToCartButtons.forEach((button, index) => {
+    button.addEventListener("click", () => {
+      alert(`✅ Product ${index + 1} added to cart!`);
+    });
+  });
+
+  // Show details functionality
+  detailButtons.forEach((button, index) => {
+    button.addEventListener("click", () => {
+      showDetails(index);
+    });
+  });
+});
+
+// Function to show product details
+function showDetails(productIndex) {
+  // You can customize each product’s details here
+  const details = [
+    "Music robot - Two speakers, comes with a charger.",
+    "Another Music robot - Portable and high quality.",
+    "Music robot with Bluetooth support.",
+    "Music robot with rechargeable battery.",
+    "Compact Music robot for travel.",
+    "Deluxe Music robot with surround sound."
+  ];
+
+  const message = details[productIndex] || "No extra details available.";
+  alert("ℹ️ " + message);
+}
